@@ -29,4 +29,6 @@ func main() {
 	ip := netip.AddrFrom16(bytes)
 
 	fmt.Println(ip.String())
+	fmt.Println(netip.PrefixFrom(ip, 64).Masked())
+	fmt.Println(netip.PrefixFrom(ip, 48).Masked())
 }
