@@ -26,9 +26,9 @@ func main() {
 	bytes[0] = 0xfd
 
 	// Form a valid IPv6 address
-	ip := netip.AddrFrom16(bytes)
+	ipv6 := netip.AddrFrom16(bytes)
 
-	fmt.Println(ip.String())
-	fmt.Println(netip.PrefixFrom(ip, 64).Masked())
-	fmt.Println(netip.PrefixFrom(ip, 48).Masked())
+	fmt.Println(ipv6.String())
+	fmt.Println(netip.PrefixFrom(ipv6, 64).Masked())
+	fmt.Println(netip.PrefixFrom(ipv6, 48).Masked())
 }
